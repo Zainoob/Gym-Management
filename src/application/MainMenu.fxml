@@ -20,7 +20,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="393.0" layoutY="325.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="71.0" style="-fx-background-radius: 37; -fx-background-color: white;" />
+      <Button layoutX="393.0" layoutY="325.0" mnemonicParsing="false" onAction="#Give_Feedback" prefHeight="68.0" prefWidth="71.0" style="-fx-background-radius: 37; -fx-background-color: white;" />
       <Button layoutX="132.0" layoutY="359.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="71.0" style="-fx-background-radius: 37; -fx-background-color: white;">
          <font>
             <Font name="System Bold" size="12.0" />
