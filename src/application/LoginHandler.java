@@ -47,11 +47,6 @@ public class LoginHandler {
 	@FXML
 	TextField pass_w = new TextField();
 	
-	@FXML
-	TextField  appointment_id = new TextField();
-	
-	@FXML
-	TextField patient_id = new TextField();
 
 
 
@@ -70,7 +65,7 @@ public class LoginHandler {
     		Scene CalenderScene=  new Scene(CalenderView);
     		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
     		window.setScene(CalenderScene);
-    		window.setTitle("");
+    		window.setTitle("Main Menu");
     		window.show();
         }
         
@@ -95,7 +90,7 @@ public class LoginHandler {
 		Scene CalenderScene=  new Scene(CalenderView);
 		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
 		window.setScene(CalenderScene);
-		window.setTitle("");
+		window.setTitle("Sign-Up Form");
 		window.show();
     }
     @FXML
@@ -104,28 +99,10 @@ public class LoginHandler {
 		Scene CalenderScene=  new Scene(CalenderView);
 		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
 		window.setScene(CalenderScene);
-		window.setTitle("");
+		window.setTitle("Main Menu");
 		window.show();
     }
     
-    @FXML
-    private void  ViewTransactions(ActionEvent event) throws IOException {
-    	Parent CalenderView = FXMLLoader.load(getClass().getResource("TransactionsView.fxml"));
-		Scene CalenderScene=  new Scene(CalenderView);
-		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-		window.setScene(CalenderScene);
-		window.setTitle("");
-		window.show();
-    }
-    @FXML
-    private void  ViewPatientProfile(ActionEvent event) throws IOException {
-    	Parent CalenderView = FXMLLoader.load(getClass().getResource("PatientView.fxml"));
-		Scene CalenderScene=  new Scene(CalenderView);
-		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-		window.setScene(CalenderScene);
-		window.setTitle("");
-		window.show();
-    }
     @FXML
     private void  Give_Feedback(ActionEvent event) throws IOException {
     	Parent CalenderView = FXMLLoader.load(getClass().getResource("Give_Feedback.fxml"));
@@ -155,15 +132,6 @@ public class LoginHandler {
     	}
     }
     
-    @FXML
-    private void Make_Payment(ActionEvent event) throws IOException {
-    	Parent CalenderView = FXMLLoader.load(getClass().getResource("PaymentDetails.fxml"));
-		Scene CalenderScene=  new Scene(CalenderView);
-		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-		window.setScene(CalenderScene);
-		window.setTitle("");
-		window.show();
-    }
     
     @FXML
     private void home(ActionEvent event) throws IOException {
