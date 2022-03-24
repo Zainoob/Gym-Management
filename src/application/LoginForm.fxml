@@ -54,5 +54,10 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
+      <Label fx:id="Prompt" layoutX="292.0" layoutY="286.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

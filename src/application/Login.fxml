@@ -7,7 +7,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="422.0" prefWidth="609.0" style="-fx-background-image: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;?import javafx.scene.image.Image?&gt;&lt;?import javafx.scene.image.ImageView?&gt;&lt;ImageView fitHeight=&quot;150.0&quot; fitWidth=&quot;200.0&quot; layoutX=&quot;230.0&quot; layoutY=&quot;49.0&quot; pickOnBounds=&quot;true&quot; preserveRatio=&quot;true&quot; xmlns=&quot;http://javafx.com/javafx/17&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot;&gt;   &lt;image&gt;      &lt;Image url=&quot;@Images/WhatsApp%20Image%202022-03-24%20at%206.40.51%20PM.jpeg&quot; /&gt;   &lt;/image&gt;&lt;/ImageView&gt;;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginHandler">
    <children>
       <ImageView disable="true" fitHeight="429.0" fitWidth="682.0" layoutX="-2.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
@@ -30,7 +29,7 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <Button layoutX="425.0" layoutY="247.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="118.0" style="-fx-background-radius: 10;" text="Sign up">
+      <Button layoutX="425.0" layoutY="247.0" mnemonicParsing="false" onAction="#SignUpPage" prefHeight="32.0" prefWidth="118.0" style="-fx-background-radius: 10;" text="Sign up">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>

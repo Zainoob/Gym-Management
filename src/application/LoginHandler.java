@@ -36,7 +36,7 @@ public class LoginHandler {
 
 	
 	@FXML
-	private Text Prompt=new Text();
+	private Label Prompt=new Label();
 	
 	@FXML
 	Label prompt = new Label();
@@ -75,15 +75,7 @@ public class LoginHandler {
         }
         
         else {
-    		Stage stage = (Stage) login.getScene().getWindow();
-      	     
-    	    stage.close();
-
-    	     Scene quizScene = new Scene(FXMLLoader.load(getClass().
-    	     getResource("Re_Login.fxml")));
-    		 Stage primaryStage1 = new Stage();
-    		 primaryStage1.setScene(quizScene);
-    		 primaryStage1.show();
+        	prompt.setText("Invalid username or password");
         }     
     }
     @FXML
@@ -97,8 +89,18 @@ public class LoginHandler {
 		window.show();
     }
     @FXML
-    private void  Appointmentoptions(ActionEvent event) throws IOException {
-    	Parent CalenderView = FXMLLoader.load(getClass().getResource("AppointmentOptions.fxml"));
+    private void SignUpPage(ActionEvent event) throws IOException {
+
+    	Parent CalenderView = FXMLLoader.load(getClass().getResource("SignupForm.fxml"));
+		Scene CalenderScene=  new Scene(CalenderView);
+		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+		window.setScene(CalenderScene);
+		window.setTitle("");
+		window.show();
+    }
+    @FXML
+    private void  Signup(ActionEvent event) throws IOException {
+    	Parent CalenderView = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
 		Scene CalenderScene=  new Scene(CalenderView);
 		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
 		window.setScene(CalenderScene);
