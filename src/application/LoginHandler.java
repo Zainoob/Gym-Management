@@ -36,7 +36,7 @@ public class LoginHandler {
 
 	
 	@FXML
-	private Label Prompt=new Label();
+	Label Prompt=new Label();
 	
 	@FXML
 	Label prompt = new Label();
@@ -49,7 +49,7 @@ public class LoginHandler {
 	
 
 
-
+	//username and password
 	String str1 = "zainab";
 	String str2 = "1234";
 
