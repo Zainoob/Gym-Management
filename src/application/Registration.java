@@ -9,6 +9,5 @@ public class Registration {
 	PlanDescription planDescription;
 	Payment payment;
 	Booking booking;
-	
 
 }
