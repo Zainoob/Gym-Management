@@ -50,8 +50,8 @@ public class LoginHandler {
 
 
 	//username and password
-	String str1 = "zainab";
-	String str2 = "1234";
+	String str1 = "a";
+	String str2 = "a";
 
 	
 
@@ -113,8 +113,8 @@ public class LoginHandler {
 		window.show();
     }
     @FXML
-    private void  ShowPaymentpage(ActionEvent event) throws IOException {
-    	Parent CalenderView = FXMLLoader.load(getClass().getResource("GetPayment.fxml"));
+    private void  BecomeMember(ActionEvent event) throws IOException {
+    	Parent CalenderView = FXMLLoader.load(getClass().getResource("RegisterMember.fxml"));
 		Scene CalenderScene=  new Scene(CalenderView);
 		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
 		window.setScene(CalenderScene);
