@@ -23,7 +23,7 @@
          <font>
             <Font size="11.0" />
          </font></TextField>
-      <Button layoutX="269.0" layoutY="305.0" mnemonicParsing="false" onAction="#LogIn" prefHeight="25.0" prefWidth="99.0" style="-fx-background-radius: 5; -fx-background-color: FF725E; -fx-border-color: black;" text="LOGIN">
+      <Button layoutX="269.0" layoutY="305.0" mnemonicParsing="false" onAction="#AdminLogIn" prefHeight="25.0" prefWidth="99.0" style="-fx-background-radius: 5; -fx-background-color: FF725E; -fx-border-color: black;" text="LOGIN">
          <font>
             <Font name="SansSerif Bold" size="12.0" />
          </font>
