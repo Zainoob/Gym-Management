@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="396.0" prefWidth="628.0" style="-fx-background-color: #ab80cf;" stylesheets="@application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginHandler">
+   <children>
+      <ImageView disable="true" fitHeight="153.0" fitWidth="183.0" layoutX="-200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/WhatsApp%20Image%202022-03-24%20at%206.40.51%20PM.jpeg" />
+         </image>
+      </ImageView>
+      <Button layoutX="359.0" layoutY="273.0" mnemonicParsing="false" onAction="#LogIn" style="-fx-background-radius: 20; -fx-background-color: #8824b9;" text="Sign Up" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ImageView disable="true" fitHeight="646.0" fitWidth="646.0" layoutX="-23.0" layoutY="-104.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Gym-bro.png" />
+         </image>
+      </ImageView>
+      <Text fill="#100606" layoutX="51.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Treadmills" wrappingWidth="96.5999755859375">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="253.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="183.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Accordion layoutX="47.0" layoutY="54.0" prefHeight="86.0" prefWidth="103.0" style="-fx-background-color: #b574c7; -fx-background-radius: 30;">
+        <panes>
+          <TitledPane animated="false" style="-fx-background-color: #b574c7;" text="JTX Sprint 9">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </TitledPane>
+            <TitledPane animated="false" layoutX="10.0" layoutY="61.0" prefHeight="21.0" prefWidth="113.0" style="-fx-background-radius: 30;" text="JTX Club Pro">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </TitledPane>
+          <TitledPane animated="false" text="JTX Club Max">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="JTX Sprint 7">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </TitledPane>
+            <TitledPane animated="false" layoutX="10.0" layoutY="114.0" text="JTX Sprint 3">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" layoutX="30.0" layoutY="56.0" prefHeight="21.0" prefWidth="113.0" style="-fx-background-radius: 30;" text="JTX Club Pro">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </TitledPane>
+        </panes>
+      </Accordion>
+      <Text fill="WHITE" layoutX="193.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="96.5999755859375">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="190.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pull-Up Bars" wrappingWidth="125.39996337890625">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Accordion layoutX="183.0" layoutY="50.0" prefHeight="55.0" prefWidth="116.0" style="-fx-background-color: #b574c7; -fx-background-radius: 30;">
+         <panes>
+            <TitledPane animated="false" style="-fx-background-color: #b574c7;" text="Rogue Jammer ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" layoutX="10.0" layoutY="61.0" prefHeight="21.0" prefWidth="113.0" style="-fx-background-radius: 30;" text="JFIT Deluxe">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+      <Text layoutX="178.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rowing Machines" wrappingWidth="125.39996337890614">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Accordion layoutX="181.0" layoutY="147.0" prefHeight="86.0" prefWidth="103.0" style="-fx-background-color: #b574c7; -fx-background-radius: 30;">
+         <panes>
+            <TitledPane animated="false" style="-fx-background-color: #b574c7;" text="Hydraulic power">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" layoutX="10.0" layoutY="61.0" prefHeight="21.0" prefWidth="113.0" style="-fx-background-radius: 30;" text="FlyWheel">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Water Rower">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+      <Text layoutX="183.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Training Benches" wrappingWidth="151.79998779296875">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Accordion layoutX="189.0" layoutY="280.0" prefHeight="86.0" prefWidth="103.0" style="-fx-background-color: #b574c7; -fx-background-radius: 30;">
+         <panes>
+            <TitledPane animated="false" style="-fx-background-color: #b574c7;" text="Preacher Curl">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" layoutX="10.0" layoutY="61.0" prefHeight="21.0" prefWidth="113.0" style="-fx-background-radius: 30;" text="Abdominal">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+      <Text layoutX="335.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stationary" wrappingWidth="96.59997558593739">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="347.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bicycles" wrappingWidth="72.59997558593739">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Accordion layoutX="323.0" layoutY="69.0" prefHeight="86.0" prefWidth="103.0" style="-fx-background-color: #b574c7; -fx-background-radius: 30;">
+         <panes>
+            <TitledPane animated="false" style="-fx-background-color: #b574c7;" text="Upright Bike">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" layoutX="10.0" layoutY="61.0" prefHeight="21.0" prefWidth="113.0" style="-fx-background-radius: 30;" text="Recumbent Bike">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Dual-Action">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Indoor Cycle">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" layoutX="10.0" layoutY="114.0" text="Air Bike">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+      <Text layoutX="476.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Others" wrappingWidth="72.59997558593739">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Accordion layoutX="460.0" layoutY="50.0" prefHeight="86.0" prefWidth="103.0" style="-fx-background-color: #b574c7; -fx-background-radius: 30;">
+         <panes>
+            <TitledPane animated="false" style="-fx-background-color: #b574c7;" text="Dumbell Set">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" layoutX="10.0" layoutY="61.0" prefHeight="21.0" prefWidth="113.0" style="-fx-background-radius: 30;" text="Barbell Set">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Kettlebell Set">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Fitness Ball">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" layoutX="10.0" layoutY="114.0" text="Bands">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" layoutX="30.0" layoutY="56.0" prefHeight="21.0" prefWidth="113.0" style="-fx-background-radius: 30;" text="Tubes">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+      <ImageView disable="true" fitHeight="46.0" fitWidth="39.0" layoutX="589.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/25694.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="589.0" layoutY="-1.0" mnemonicParsing="false" onAction="#userhome" opacity="0.0" prefHeight="39.0" prefWidth="39.0" text="Button" />
+   </children>
+</AnchorPane>

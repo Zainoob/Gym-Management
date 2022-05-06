@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="473.0" prefWidth="511.0" style="-fx-background-color: #ab80cf;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginHandler">
+   <children>
+      <ImageView fitHeight="520.0" fitWidth="530.0" layoutX="-8.0" layoutY="-33.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Dropdown%20menu-pana.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="215.0" layoutY="73.0" prefHeight="342.0" prefWidth="100.0" style="-fx-background-color: white;">
+         <children>
+            <Text fill="#030303" layoutX="20.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Standard" wrappingWidth="59.20658874511719">
+               <font>
+                  <Font name="SansSerif Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="23.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All Gym Facilities" textAlignment="CENTER" wrappingWidth="53.068359375" />
+            <Text layoutX="23.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monthly Payments" textAlignment="CENTER" wrappingWidth="59.20658874511719" />
+            <Text layoutX="20.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3000 PKR" textAlignment="CENTER" wrappingWidth="59.20658874511719" />
+            <Text layoutX="20.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trainer Sessions" textAlignment="CENTER" wrappingWidth="59.20658874511719" />
+            <Text layoutX="10.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customised workout plan" textAlignment="CENTER" wrappingWidth="79.20658874511719" />
+         </children>
+      </Pane>
+      <Pane layoutX="309.0" layoutY="73.0" prefHeight="342.0" prefWidth="100.0" style="-fx-background-color: white;">
+         <children>
+            <Line endX="-93.00001525878906" endY="196.39996337890625" layoutX="93.0" layoutY="146.0" startX="-93.00001525878906" startY="-145.99998474121094" />
+            <Text fill="#030303" layoutX="20.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Premium" wrappingWidth="59.20658874511719">
+               <font>
+                  <Font name="SansSerif Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="21.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All Gym Facilities" textAlignment="CENTER" wrappingWidth="53.068359375" />
+            <Text layoutX="20.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monthly Payments" textAlignment="CENTER" wrappingWidth="59.20658874511719" />
+            <Text layoutX="18.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3500 PKR" textAlignment="CENTER" wrappingWidth="59.20658874511719" />
+            <Text layoutX="20.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trainer Sessions" textAlignment="CENTER" wrappingWidth="59.20658874511719" />
+            <Text layoutX="8.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customised workout plan" textAlignment="CENTER" wrappingWidth="79.20658874511719" />
+         </children>
+      </Pane>
+      <Pane layoutX="121.0" layoutY="73.0" prefHeight="342.0" prefWidth="94.0" style="-fx-background-color: white;">
+         <children>
+            <Line endX="-93.00001525878906" endY="196.39996337890625" layoutX="187.0" layoutY="146.0" startX="-93.00001525878906" startY="-145.99998474121094" />
+            <Text fill="#030303" layoutX="25.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Basic " wrappingWidth="41.60661315917969">
+               <font>
+                  <Font name="SansSerif Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="20.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All Gym Facilities" textAlignment="CENTER" wrappingWidth="53.068359375" />
+            <Text layoutX="16.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monthly Payments" textAlignment="CENTER" wrappingWidth="59.20658874511719" />
+            <Text layoutX="17.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2000 PKR" textAlignment="CENTER" wrappingWidth="59.20658874511719" />
+            <Text layoutX="17.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No Trainer sessions" textAlignment="CENTER" wrappingWidth="59.20658874511719" />
+            <Text layoutX="7.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No customised workout plan" textAlignment="CENTER" wrappingWidth="79.20658874511719" />
+         </children>
+      </Pane>
+      <Line endX="-93.00001525878906" endY="196.39996337890625" layoutX="502.0" layoutY="253.0" startX="-93.0" startY="-214.0" strokeWidth="7.0" />
+      <Line endX="-93.00001525878906" endY="196.39996337890625" layoutX="214.0" layoutY="245.0" startX="-93.0" startY="-214.0" strokeWidth="7.0" />
+      <Text fill="#030303" layoutX="168.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose a plan that's right for you" wrappingWidth="212.806640625">
+         <font>
+            <Font name="SansSerif Bold" size="12.0" />
+         </font>
+      </Text>
+      <Pane layoutX="132.0" layoutY="48.0" prefHeight="23.0" prefWidth="35.0" style="-fx-background-color: #dfdddd;" />
+      <ImageView disable="true" fitHeight="59.0" fitWidth="59.0" layoutX="453.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/25694.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="453.0" layoutY="-4.0" mnemonicParsing="false" onAction="#userhome" opacity="0.0" prefHeight="59.0" prefWidth="59.0" text="Button" />
+   </children>
+</AnchorPane>

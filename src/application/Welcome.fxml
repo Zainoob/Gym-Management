@@ -29,7 +29,7 @@
             <Image url="@Images/Wall%20post-amico.png" />
          </image>
       </ImageView>
-      <Button graphicTextGap="5.0" layoutX="109.0" layoutY="370.0" lineSpacing="10.0" mnemonicParsing="false" onAction="#Member" prefHeight="32.0" prefWidth="118.0" style="-fx-background-radius: 5; -fx-background-color: BA68C8;" text="Member" textAlignment="CENTER">
+      <Button graphicTextGap="5.0" layoutX="93.0" layoutY="370.0" lineSpacing="10.0" mnemonicParsing="false" onAction="#Member" prefHeight="32.0" prefWidth="118.0" style="-fx-background-radius: 5; -fx-background-color: BA68C8;" text="User" textAlignment="CENTER">
          <font>
             <Font name="SansSerif Bold" size="16.0" />
          </font>

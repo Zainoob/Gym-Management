@@ -44,5 +44,11 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
+      <ImageView disable="true" fitHeight="51.0" fitWidth="52.0" layoutX="434.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/25694.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="434.0" mnemonicParsing="false" onAction="#userhome" opacity="0.0" prefHeight="51.0" prefWidth="52.0" text="Button" />
    </children>
 </AnchorPane>
