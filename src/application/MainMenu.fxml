@@ -15,7 +15,7 @@
          </image>
       </ImageView>
       <Button layoutX="403.0" layoutY="64.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="71.0" style="-fx-background-radius: 37; -fx-background-color: white;" />
-      <Button layoutX="367.0" layoutY="199.0" mnemonicParsing="false" onAction="#BecomeMember" prefHeight="68.0" prefWidth="71.0" style="-fx-background-radius: 37; -fx-background-color: white;" text="a">
+      <Button layoutX="367.0" layoutY="199.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="71.0" style="-fx-background-radius: 37; -fx-background-color: white;" text="a">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
