@@ -20,10 +20,8 @@ public class LoginHandler {
 
 
 	@FXML
-	Button login;
-
-	@FXML
-	Button Re_login;
+	Button Login;
+	
 	
 	@FXML
 	Button Home;
@@ -73,6 +71,17 @@ public class LoginHandler {
         	prompt.setText("Invalid username or password");
         }     
     }
+    @FXML
+    private void Member(ActionEvent event) throws IOException {
+
+    	Parent CalenderView = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+		Scene CalenderScene=  new Scene(CalenderView);
+		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+		window.setScene(CalenderScene);
+		window.setTitle("");
+		window.show();
+    }
+    
     @FXML
     private void LoginPage(ActionEvent event) throws IOException {
 
@@ -145,11 +154,11 @@ public class LoginHandler {
     
     @FXML
     private void home(ActionEvent event) throws IOException {
-    	Parent HomeView = FXMLLoader.load(getClass().getResource("Main_Menu.fxml"));
+    	Parent HomeView = FXMLLoader.load(getClass().getResource("Welcome.fxml"));
 		Scene HomeScene=  new Scene(HomeView);
 		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
 		window.setScene(HomeScene);
-		window.setTitle("Main Menu");
+		window.setTitle("Gym Management System");
 		window.show();
     }
 
