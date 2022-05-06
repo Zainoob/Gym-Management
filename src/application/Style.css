@@ -1,0 +1,33 @@
+.MemberButton
+{
+    -fx-background-color: #BA68C8;
+    -fx-background-radius: 5;
+}   
+
+.MemberButton:hover
+{
+    -fx-background-color: WHITE;
+    -fx-background-radius: 5;
+    -fx-text-fill: #BA68C8;
+    -fx-border-color: #BA68C8;
+    -fx-border-radius: 3;
+    -fx-border-width: 1;
+    
+}
+
+.AdminButton
+{
+    -fx-background-color: #FF725E;
+    -fx-background-radius: 5;
+}   
+
+.AdminButton:hover
+{
+    -fx-background-color: WHITE;
+    -fx-background-radius: 5;
+    -fx-text-fill: #FF725E;
+    -fx-border-color: #FF725E;
+    -fx-border-radius: 3;
+    -fx-border-width: 1;
+    
+}
