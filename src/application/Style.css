@@ -122,3 +122,68 @@
     -fx-text-fill: FF725E;
   
 }
+
+.FeedbackBox
+{
+    -fx-background-color: BA68C8;
+    -fx-border-color: BLACK;
+    -fx-border-radius: 5;
+    -fx-text-fill: WHITE;
+}
+
+.FeedbackBox:hover
+{
+    -fx-background-color: BA68C8;
+    -fx-border-color: WHITE;
+    -fx-border-radius: 5;
+    -fx-prompt-text-fill: WHITE;
+    -fx-text-fill: WHITE;
+}
+
+.FeedbackSubmitButton
+{
+    -fx-background-color: BLACK;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+
+.FeedbackSubmitButton:hover
+{
+    -fx-background-color: WHITE;
+    -fx-background-radius: 5;
+    -fx-border-color: BLACK;
+    -fx-border-radius: 5;
+    -fx-text-fill: BLACK;
+}
+
+.SignUpSuccessfullLabel
+{
+    -fx-rotate: 90;
+    -fx-text-fill: BLACK;   
+}
+
+.SignUpSuccessfullLabel:hover
+{
+    -fx-rotate: 90;
+    -fx-text-fill: WHITE;   
+}
+
+.SignUpButton
+{
+    -fx-background-radius: 30;
+    -fx-background-color:  #8f51a4;
+    
+    
+}
+
+.SignUpButton:hover
+{
+    -fx-background-radius: 30;
+    -fx-background-color:  WHITE;
+    -fx-border-radius: 29;
+    -fx-border-color: #8f51a4;
+    -fx-text-fill: #8f51a4;
+}
+
+
+
