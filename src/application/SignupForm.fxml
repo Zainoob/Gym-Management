@@ -22,9 +22,9 @@
             <Image url="@Images/Gym-bro.png" />
          </image>
       </ImageView>
-      <Text fill="WHITE" layoutX="243.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter your Details" wrappingWidth="183.0">
+      <Text fill="WHITE" layoutX="45.0" layoutY="49.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="SIGN UP" textAlignment="CENTER" wrappingWidth="120.0">
          <font>
-            <Font name="System Bold" size="18.0" />
+            <Font name="SansSerif Bold Italic" size="24.0" />
          </font>
       </Text>
       <TextField fx:id="name" layoutX="179.0" layoutY="82.0" prefHeight="24.0" prefWidth="128.0" promptText="Full Name" style="-fx-background-radius: 20;" />
@@ -32,18 +32,13 @@
       <TextField fx:id="phoneno" layoutX="179.0" layoutY="198.0" prefHeight="24.0" prefWidth="128.0" promptText="Phone Number" style="-fx-background-radius: 20;" />
       <TextField fx:id="password" layoutX="179.0" layoutY="260.0" prefHeight="24.0" prefWidth="128.0" promptText="Password" style="-fx-background-radius: 20;" />
       <TextField fx:id="cnic" layoutX="179.0" layoutY="317.0" prefHeight="24.0" prefWidth="128.0" promptText="CNIC" style="-fx-background-radius: 20;" />
-      <Button layoutX="335.0" layoutY="167.0" mnemonicParsing="false" onAction="#Signup" prefHeight="62.0" prefWidth="61.0" style="-fx-background-radius: 30; -fx-background-color: #8f51a4;" text="Sign Up" textFill="WHITE">
+      <Button layoutX="335.0" layoutY="167.0" mnemonicParsing="false" onAction="#Signup" prefHeight="62.0" prefWidth="61.0" styleClass="SignUpButton" stylesheets="@Style.css" text="Sign Up" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <ImageView disable="true" fitHeight="40.0" fitWidth="32.0" layoutX="592.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Images/25694.png" />
-         </image>
-      </ImageView>
-      <ComboBox fx:id="descBox" layoutX="320.0" layoutY="108.0" opacity="0.75" prefHeight="24.0" prefWidth="120.0" promptText="Select Plan" />
-      <Button layoutX="593.0" layoutY="2.0" mnemonicParsing="false" onAction="#userhome" opacity="0.0" prefHeight="32.0" prefWidth="32.0" text="Button" />
+      <ComboBox fx:id="descBox" layoutX="333.0" layoutY="108.0" opacity="0.75" prefHeight="25.0" prefWidth="109.0" promptText="Select Plan" styleClass="SelectPlanButton" stylesheets="@Style.css" />
+      <Button layoutX="587.0" layoutY="2.0" mnemonicParsing="false" onAction="#userhome" prefHeight="39.0" prefWidth="38.0" styleClass="HomeButton" stylesheets="@Style.css" text="Button" />
       <Label fx:id="prompt2" layoutX="184.0" layoutY="348.0">
          <font>
             <Font name="System Bold" size="12.0" />
@@ -59,5 +54,10 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
+      <ImageView disable="true" fitHeight="32.0" fitWidth="32.0" layoutX="590.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/25694.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

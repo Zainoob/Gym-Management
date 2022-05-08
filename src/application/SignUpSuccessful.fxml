@@ -9,31 +9,36 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="409.0" prefWidth="505.0" style="-fx-background-color: #ab80cf;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RegistrationHandler">
    <children>
-      <ImageView disable="true" fitHeight="500.0" fitWidth="523.0" layoutX="-9.0" layoutY="-34.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="412.0" fitWidth="511.0" layoutX="-2.0" layoutY="-1.0" pickOnBounds="true">
          <image>
-            <Image url="@Images/Finish%20line-rafiki.png" />
+            <Image url="@Images/WhatsApp%20Image%202022-03-24%20at%206.40.51%20PM.jpeg" />
          </image>
       </ImageView>
-      <Label layoutX="72.0" layoutY="52.0" prefHeight="36.0" prefWidth="189.0" style="-fx-background-color: black;" text="Sign Up Successful" textAlignment="CENTER" textFill="#fcfcfc">
+      <ImageView fitHeight="445.0" fitWidth="412.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Subscriber-bro.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="291.0" layoutY="177.0" prefHeight="56.0" prefWidth="298.0" styleClass="SignUpSuccessfullLabel" stylesheets="@Style.css" text="Sign Up Successful" textAlignment="RIGHT" textFill="#fcfcfc">
          <font>
-            <Font size="21.0" />
+            <Font name="SansSerif Regular" size="30.0" />
          </font>
       </Label>
-      <ImageView disable="true" fitHeight="58.0" fitWidth="54.0" layoutX="451.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Images/25694.png" />
-         </image>
-      </ImageView>
-      <Button layoutX="452.0" layoutY="-1.0" mnemonicParsing="false" onAction="#userhome" opacity="0.0" prefHeight="54.0" prefWidth="54.0" text="Button" />
-      <Label layoutX="113.0" layoutY="372.0" text="Your Registration ID is : ">
+      <Button layoutX="462.0" layoutY="8.0" mnemonicParsing="false" onAction="#userhome" prefHeight="36.0" prefWidth="38.0" styleClass="HomeButton" stylesheets="@Style.css" text="Button" />
+      <Label layoutX="113.0" layoutY="382.0" text="Your Registration ID is : ">
          <font>
             <Font name="SansSerif Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="prompt3" layoutX="277.0" layoutY="370.0">
+      <Label fx:id="prompt3" layoutX="277.0" layoutY="380.0" textFill="#9137a1">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
+      <ImageView disable="true" fitHeight="48.0" fitWidth="31.0" layoutX="466.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/25694.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
