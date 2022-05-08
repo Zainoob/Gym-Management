@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="409.0" prefWidth="505.0" style="-fx-background-color: #ab80cf;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RegistrationHandler">
+   <children>
+      <ImageView disable="true" fitHeight="500.0" fitWidth="523.0" layoutX="-9.0" layoutY="-34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Finish%20line-rafiki.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="72.0" layoutY="52.0" prefHeight="36.0" prefWidth="189.0" style="-fx-background-color: black;" text="Sign Up Successful" textAlignment="CENTER" textFill="#fcfcfc">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <ImageView disable="true" fitHeight="58.0" fitWidth="54.0" layoutX="451.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/25694.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="452.0" layoutY="-1.0" mnemonicParsing="false" onAction="#userhome" opacity="0.0" prefHeight="54.0" prefWidth="54.0" text="Button" />
+      <Label layoutX="113.0" layoutY="372.0" text="Your Registration ID is : ">
+         <font>
+            <Font name="SansSerif Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="prompt3" layoutX="277.0" layoutY="370.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
