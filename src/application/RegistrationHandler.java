@@ -40,6 +40,10 @@ public class RegistrationHandler implements Initializable{
 	@FXML
 	Label prompt2 = new Label();
 	@FXML
+	Label prompt21 = new Label();
+	@FXML
+	Label prompt22 = new Label();
+	@FXML
 	Label prompt3 = new Label();
 	
 	public void settexttolabel(int text) {
@@ -54,15 +58,35 @@ public class RegistrationHandler implements Initializable{
 				|| password.getText().isBlank()) {
 			prompt2.setText("Please fill in all fields ");
 		} 
+    	else if(Integer.parseInt(age.getText())<0 ||Integer.parseInt(age.getText())>80)
+    	{
+    		prompt2.setText("");
+    		prompt21.setText("");
+    		prompt22.setText("*Enter a valid age");
+    	}
+    	else if(phoneno.getText().length() != 11 )
+    	{
+    		prompt2.setText("");
+    		prompt21.setText("*Must be 11 digits");
+    	}
+    	else if(cnic.getText().length() != 13)
+    	{
+    		prompt21.setText("");
+    		prompt2.setText("*Must be 13 digits");
+    	}
     	else
     	{
+    		prompt2.setText("");
+    		prompt21.setText("");
+    		prompt22.setText("");
     		int Age = Integer.parseInt(age.getText());
-        	int phoneNo = Integer.parseInt(phoneno.getText());
-        	int Cnic =Integer.parseInt(cnic.getText());
+        	String phoneNo = phoneno.getText();
+        	String c=cnic.getText();
+        	Long Cnic =Long.parseLong(c);
         	String Name=name.getText();
         	String Password=password.getText();
         	String plan=descBox.getValue();
-    		int x=123;
+    		int x=193;
     		prompt2.setText("");
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(getClass().getResource("SignUpSuccessful.fxml"));

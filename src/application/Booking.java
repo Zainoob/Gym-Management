@@ -14,13 +14,13 @@ public class Booking {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public void setBookingdetails(String name, int age, int cnic, int phoneNo, String password,  int bookingStatus) {
+	public void setBookingdetails(String name, int age, Long cnic, String phoneNo, String password,  int bookingStatus) {
 		Member Member=new Member();
 		Member.setmemberDetails(name, age, cnic, phoneNo, password);
 		this.member = Member;
 		this.bookingStatus = bookingStatus;
 	}
-	public void setBookingMemberdetails(String name, int age, int cnic, int phoneNo, String password) {
+	public void setBookingMemberdetails(String name, int age, Long cnic, String phoneNo, String password) {
 		Member Member=new Member();
 		Member.setmemberDetails(name, age, cnic, phoneNo, password);
 	}
