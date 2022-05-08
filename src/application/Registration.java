@@ -17,7 +17,7 @@ public class Registration {
 		gym.loadPlansCatalogues();
 
 	}
-	public void RegisterMember(String name, int age, int cnic, int phoneNo, String password,String desc)
+	public void RegisterMember(String name, int age, Long cnic, String phoneNo, String password,String desc)
 	{
 		this.getBooking().setBookingMemberdetails(name, age, cnic, phoneNo, password);
 		this.booking.setBooking(new Date(), 1);

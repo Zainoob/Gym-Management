@@ -4,14 +4,14 @@ public class Member {
 	int memberID;
 	String name;
 	int age;
-	int cnic;
-	int PhoneNo;
+	Long cnic;
+	String PhoneNo;
 	String password;
 	
 	
 	public Member() {
 	}
-	public void setmemberDetails(String name, int age, int cnic, int phoneNo, String password) {
+	public void setmemberDetails(String name, int age, Long cnic, String phoneNo, String password) {
 		this.name = name;
 		this.age = age;
 		this.cnic = cnic;
@@ -36,16 +36,16 @@ public class Member {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	public int getCnic() {
+	public Long getCnic() {
 		return cnic;
 	}
-	public void setCnic(int cnic) {
+	public void setCnic(Long cnic) {
 		this.cnic = cnic;
 	}
-	public int getPhoneNo() {
+	public String getPhoneNo() {
 		return PhoneNo;
 	}
-	public void setPhoneNo(int phoneNo) {
+	public void setPhoneNo(String phoneNo) {
 		PhoneNo = phoneNo;
 	}
 	public String getPassword() {
