@@ -31,3 +31,94 @@
     -fx-border-width: 1;
     
 }
+
+.AdminLoginButton
+{
+    -fx-background-color: #FF725E;
+    -fx-background-radius: 5;
+    -fx-border-color: BLACK;
+}   
+
+.AdminLoginButton:hover
+{
+    -fx-background-color: WHITE;
+    -fx-background-radius: 5;
+    -fx-text-fill: #FF725E;
+    -fx-border-color: #FF725E;
+    -fx-border-radius: 3;
+    -fx-border-width: 1;
+    
+}
+
+.HomeButton
+{
+    -fx-background-color: None;
+}
+
+.HomeButton:hover
+{
+    -fx-background-color: WHITE;
+    -fx-border-color: BLACK;
+    -fx-border-radius: 5;
+    -fx-border-width: 1;
+}
+
+.MembersListButton
+{
+    -fx-background-color: WHITE;
+    -fx-background-radius: 37;
+    -fx-text-fill: BLACK;  
+    
+    
+}
+
+.MembersListButton:hover
+{
+    -fx-text-fill: FF725E;
+  
+}
+
+.AdminPaymentsButton
+{
+    -fx-background-color: WHITE;
+    -fx-background-radius: 37;
+    -fx-text-fill: BLACK;  
+    
+    
+}
+
+.AdminPaymentsButton:hover
+{
+    -fx-text-fill: FF725E;
+  
+}
+
+.TotalMonthlyRevenueButton
+{
+    -fx-background-color: WHITE;
+    -fx-background-radius: 37;
+    -fx-text-fill: BLACK;  
+    
+    
+}
+
+.TotalMonthlyRevenueButton:hover
+{
+    -fx-text-fill: FF725E;
+  
+}
+
+.CancelMembership
+{
+    -fx-background-color: WHITE;
+    -fx-background-radius: 37;
+    -fx-text-fill: BLACK;  
+    
+    
+}
+
+.CancelMembership:hover
+{
+    -fx-text-fill: FF725E;
+  
+}
