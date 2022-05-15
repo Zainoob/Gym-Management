@@ -58,7 +58,7 @@ public class RegistrationHandler implements Initializable{
 				|| password.getText().isBlank()) {
 			prompt2.setText("Please fill in all fields ");
 		} 
-    	else if(Integer.parseInt(age.getText())<0 ||Integer.parseInt(age.getText())>80)
+    	else if(Integer.parseInt(age.getText())<10 ||Integer.parseInt(age.getText())>100)
     	{
     		prompt2.setText("");
     		prompt21.setText("");
