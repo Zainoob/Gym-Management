@@ -1,12 +1,20 @@
 package application;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Member {
-	int memberID;
-	String name;
-	int age;
-	Long cnic;
-	String PhoneNo;
-	String password;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int memberID;
+	private String name;
+	private int age;
+	private Long cnic;
+	private String PhoneNo;
+	private String password;
 	
 	
 	public Member() {
@@ -15,7 +23,7 @@ public class Member {
 		this.name = name;
 		this.age = age;
 		this.cnic = cnic;
-		PhoneNo = phoneNo;
+		this.PhoneNo = phoneNo;
 		this.password = password;
 	}
 	public int getMemberID() {
@@ -55,5 +63,4 @@ public class Member {
 		this.password = password;
 	}
 	
-
 }

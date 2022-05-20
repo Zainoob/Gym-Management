@@ -24,8 +24,6 @@ public class RegistrationHandler implements Initializable{
 	@FXML
 	ComboBox<String> descBox = new ComboBox<String>();
 	@FXML
-	TextArea feedback;
-	@FXML
 	TextField name=new TextField();
 	@FXML
 	TextField age=new TextField();
@@ -52,7 +50,7 @@ public class RegistrationHandler implements Initializable{
 	
     @FXML
     private void  Signup(ActionEvent event) throws IOException {
-    
+    	RegistrationController rc = new RegistrationController();
     	if (descBox.getValue() == null || phoneno.getText().isBlank()
 				|| name.getText().isBlank() || age.getText().isBlank() || cnic.getText().isBlank()
 				|| password.getText().isBlank()) {
@@ -86,8 +84,10 @@ public class RegistrationHandler implements Initializable{
         	String Name=name.getText();
         	String Password=password.getText();
         	String plan=descBox.getValue();
-    		int x=193;
     		prompt2.setText("");
+    		int x=193;
+    		rc.registration(plan, Name, Age, Cnic, phoneNo, Password);
+    		
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(getClass().getResource("SignUpSuccessful.fxml"));
 			Parent HomeView = loader.load();

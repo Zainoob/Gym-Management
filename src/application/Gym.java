@@ -1,6 +1,7 @@
 package application;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class Gym {
@@ -25,6 +26,69 @@ public class Gym {
         }
         return gym;
     }
+	
+	
+	
+	public int getGymID() {
+		return GymID;
+	}
+	public void setGymID(int gymID) {
+		GymID = gymID;
+	}
+	public String getAddress() {
+		return Address;
+	}
+	public void setAddress(String address) {
+		Address = address;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getPhoneNo() {
+		return PhoneNo;
+	}
+	public void setPhoneNo(int phoneNo) {
+		PhoneNo = phoneNo;
+	}
+	public Ledger getLedger() {
+		return ledger;
+	}
+	public void setLedger(Ledger ledger) {
+		this.ledger = ledger;
+	}
+	public List<Trainer> getTrainers() {
+		return trainers;
+	}
+	public void setTrainers(List<Trainer> trainers) {
+		this.trainers = trainers;
+	}
+	public List<Registration> getRegistrationSchedule() {
+		return RegistrationSchedule;
+	}
+	public void setRegistrationSchedule(List<Registration> registrationSchedule) {
+		RegistrationSchedule = registrationSchedule;
+	}
+	public List<PlanDescription> getPlansCatalogue() {
+		return PlansCatalogue;
+	}
+	public void setPlansCatalogue(List<PlanDescription> plansCatalogue) {
+		PlansCatalogue = plansCatalogue;
+	}
+	public List<Feedback> getFeedbacks() {
+		return Feedbacks;
+	}
+	public void setFeedbacks(List<Feedback> feedbacks) {
+		Feedbacks = feedbacks;
+	}
+	public static Gym getGym() {
+		return gym;
+	}
+	public static void setGym(Gym gym) {
+		Gym.gym = gym;
+	}
 	public void loadPlansCatalogues()
 	{
 		PlanDescription a=new PlanDescription();
@@ -49,5 +113,5 @@ public class Gym {
 		}
 		return a;
 	}
-
+	
 }

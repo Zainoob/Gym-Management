@@ -8,14 +8,21 @@ public class Payment {
 	Date dateDue;
 	int amount;
 	int paidStatus;
-	public Payment(int paymentID, Date datePaid, Date dateDue, int amount, int paidStatus) {
+	
+
+	public Payment() {
+		amount=0;
+		paidStatus=0;
+	}
+	
+	public Payment(Date datePaid, Date dateDue, int amount, int paidStatus) {
 		super();
-		this.paymentID = paymentID;
 		this.datePaid = datePaid;
 		this.dateDue = dateDue;
 		this.amount = amount;
 		this.paidStatus = paidStatus;
 	}
+
 	void setpaymentDetails(int amount, int paidStatus)
 	{
 		this.amount = amount;
