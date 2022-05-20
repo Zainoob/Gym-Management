@@ -1,6 +1,6 @@
 package application;
 import java.io.IOException;
-
+import java.util.Date;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -30,7 +30,7 @@ public class LoginHandler {
 	Button Welcome;
 	
 	@FXML
-	TextArea feedback;
+	TextField feedback;
 
 	@FXML
 	Button Submit;
@@ -54,7 +54,11 @@ public class LoginHandler {
 	String str1 = "a";
 	String str2 = "a";
 
-	
+	private static Gym gym;
+
+	public LoginHandler() {
+		gym = gym.getInstance();
+	}
 
     @FXML
     private void LogIn(ActionEvent event) throws IOException {
@@ -79,19 +83,21 @@ public class LoginHandler {
     @FXML
     private void Enter_Feedback(ActionEvent event) throws IOException {
     	String feedbackk=feedback.getText();
+    	LoginController c = new LoginController();
+    	Date d = new Date();
     	if(feedback.getText().isEmpty())
     	{
     		prompt.setText("*Feedback is empty");
     	}
     	else
     	{
-    		Parent CalenderView = FXMLLoader.load(getClass().getResource("FeedbackSuccessful.fxml"));
+    		c.feedback(feedbackk, d);
+    		Parent CalenderView = FXMLLoader.load(getClass().getResource("UserMenu.fxml"));
     		Scene CalenderScene=  new Scene(CalenderView);
     		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
     		window.setScene(CalenderScene);
     		window.setTitle("");
     		window.show();
-    		//clinic.setFeedback(feedbackk);
     	}
     }
     @FXML

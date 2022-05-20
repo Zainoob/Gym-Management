@@ -5,28 +5,50 @@ import java.util.Date;
 public class Registration {
 	int RegID;
 	int activeStatus;
+	Member member;
 	Date regDate;
 	PlanDescription planDescription;
 	Payment payment;
-	Booking booking;
 
-	private static Gym gym = null;
-
-	public Registration() {
-		gym = gym.getInstance();
-		gym.loadPlansCatalogues();
-
-	}
-	public void RegisterMember(String name, int age, Long cnic, String phoneNo, String password,String desc)
+	
+	public Registration(int regid, int activestatus,Payment payment, PlanDescription planDescription, Member member)
 	{
-		this.getBooking().setBookingMemberdetails(name, age, cnic, phoneNo, password);
-		this.booking.setBooking(new Date(), 1);
-		PlanDescription a =new PlanDescription();
-		a=gym.searchPlansCatalogue(desc);
-		this.planDescription.setPlan(a);
-		this.payment.setpaymentDetails(a.getFee(), 0);
-		gym.RegistrationSchedule.add(this);
+		this.member = member;
+		this.planDescription = planDescription;
+		this.payment = payment;
+		RegID = regid;
+		activeStatus = activestatus;	
 	}
+	
+	
+	public Registration() 
+	{
+		this.payment = new Payment();
+		this.member = new Member();
+		this.planDescription = new PlanDescription();	
+		activeStatus=0;
+	}
+	
+	public void setRegistrationDetails(int activestatus,Payment payment, PlanDescription planDescription)
+	{
+		this.planDescription = planDescription;
+		this.payment = payment;
+		activeStatus = activestatus;	
+		DBHandler ins = new DBHandler();
+		
+	}
+
+	public void setMemberDetails(String name, int age, long cnic, String phoneno, String password)
+	{
+		this.member.setName(name);
+		this.member.setAge(age);
+		this.member.setCnic(cnic);
+		this.member.setPhoneNo(phoneno);
+		this.member.setPassword(password);
+		DBHandler ins = new DBHandler();
+		ins.MemberDBHandler(member);
+	}
+
 
 	public int getRegID() {
 		return RegID;
@@ -68,21 +90,7 @@ public class Registration {
 		this.payment = payment;
 	}
 
-	public Booking getBooking() {
-		return booking;
-	}
 
-	public void setBooking(Booking booking) {
-		this.booking = booking;
-	}
-
-	public static Gym getGym() {
-		return gym;
-	}
-
-	public static void setGym(Gym gym) {
-		Registration.gym = gym;
-	}
 	
 
 
