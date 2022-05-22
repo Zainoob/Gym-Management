@@ -113,19 +113,5 @@ public class Gym {
 		}
 		return a;
 	}
-	public int validateUser(String username,String password)
-	{
-		DBHandler db=new DBHandler();
-		int id=0;
-		List<Member> list=db.FetchAllMembers(); 
-		for(int i=0;i<list.size();i++)
-		{
-			if(username.compareTo(list.get(i).getName())==0 && password.compareTo(list.get(i).getPassword())==0)
-			{
-				id= list.get(i).getMemberID();
-			}
-		}
-		return id;
-	}
 	
 }
