@@ -35,7 +35,7 @@ public class Registration {
 	@JoinColumn(name="plandesc_id")
 	PlanDescription planDescription;
 	
-	@OneToOne(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
+	@OneToOne(fetch = FetchType.EAGER/*, cascade = {CascadeType.ALL}*/)
     @JoinColumn(name="paymentID")
 	Payment payment;
 

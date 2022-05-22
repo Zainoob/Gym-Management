@@ -16,8 +16,11 @@ public class Member {
 	private String PhoneNo;
 	private String password;
 	
+	private static Gym gym = null;
+	
 	
 	public Member() {
+		gym = gym.getInstance();
 	}
 	public void setmemberDetails(String name, int age, Long cnic, String phoneNo, String password) {
 		this.name = name;
@@ -25,6 +28,7 @@ public class Member {
 		this.cnic = cnic;
 		this.PhoneNo = phoneNo;
 		this.password = password;
+	
 		DBHandler ins = new DBHandler();
 		ins.MemberDBHandler(this);
 	}

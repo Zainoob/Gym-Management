@@ -24,6 +24,7 @@ public class RegistrationController
 		DBHandler ins = new DBHandler();
 		ins.RegistationDBHandler(r);
 		//r.setRegistrationDetails(1, r.payment, r.planDescription);
+		gym.RegistrationSchedule.add(r);
 	}
 	
 	

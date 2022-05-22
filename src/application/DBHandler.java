@@ -16,13 +16,14 @@ public class DBHandler
 		gym = gym.getInstance();
 	}
 	
-	public void Initialize() {
-	SessionFactory factory = new Configuration().configure().buildSessionFactory();
-  	Session session = factory.openSession();
-	String query = "from Registration";
-	Query q=session.createQuery(query);
-	List<Registration> list=q.list(); 
-	gym.RegistrationSchedule = q.list();
+	public void Initialize() 
+	{
+		SessionFactory factory = new Configuration().configure().buildSessionFactory();
+	  	Session session = factory.openSession();
+		String query = "from Registration";
+		Query q=session.createQuery(query);
+		List<Registration> list=q.list(); 
+		gym.RegistrationSchedule = q.list();
 	}
 	
 	public void FeedbackDBHandler(Feedback obj)
