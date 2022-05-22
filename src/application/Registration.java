@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -31,11 +32,11 @@ public class Registration {
 	
 	
 	
-	@OneToOne(fetch = FetchType.EAGER)
+	@OneToOne(fetch = FetchType.EAGER,cascade = {CascadeType.ALL})
 	@JoinColumn(name="plandesc_id")
 	PlanDescription planDescription;
 	
-	@OneToOne(fetch = FetchType.EAGER/*, cascade = {CascadeType.ALL}*/)
+	@OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="paymentID")
 	Payment payment;
 

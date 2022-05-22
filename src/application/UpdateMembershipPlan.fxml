@@ -23,7 +23,7 @@
          </image>
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#edbdf7" height="192.0" layoutX="115.0" layoutY="65.0" stroke="#e5bfec" strokeType="INSIDE" width="236.0" />
-      <TextField fx:id="regID" layoutX="158.0" layoutY="103.0" promptText="Registration ID" style="-fx-background-radius: 15;" />
+      <TextField fx:id="regID2" layoutX="158.0" layoutY="103.0" promptText="Registration ID" style="-fx-background-radius: 15;" />
       <Button layoutX="209.0" layoutY="215.0" mnemonicParsing="false" onAction="#UpdateMembershipPlan" prefHeight="14.0" prefWidth="46.0" style="-fx-background-color: #b160dc;" text="Enter" textFill="#eaeaea">
          <font>
             <Font name="System Bold" size="12.0" />

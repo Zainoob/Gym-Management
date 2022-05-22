@@ -21,7 +21,7 @@ public class RegistrationController
 		r.payment.setpaymentDetails(r.getPlanDescription().getFee(), 0);
 		r.setActiveStatus(1);
 		r.setRegDate(new Date());
-    DBHandler ins = new DBHandler();
+		DBHandler ins = new DBHandler();
 		ins.RegistationDBHandler(r);
 		//r.setRegistrationDetails(1, r.payment, r.planDescription);
 		gym.RegistrationSchedule.add(r);
@@ -45,16 +45,21 @@ public class RegistrationController
 		int check=0;
 		for(int i=0;i<gym.RegistrationSchedule.size();i++)
 		{
-			if((gym.RegistrationSchedule.get(i).getRegID()==regid) && gym.RegistrationSchedule.get(i).member.getPhoneNo().compareTo(phonenumber)==0)
+			if (gym.RegistrationSchedule.get(i).getActiveStatus()!=0)
 			{
-				if(gym.RegistrationSchedule.get(i).getPayment().getPaidStatus()!=0)
+				if((gym.RegistrationSchedule.get(i).getRegID()==regid) && gym.RegistrationSchedule.get(i).member.getPhoneNo().compareTo(phonenumber)==0)
 				{
-					gym.RegistrationSchedule.get(i).setActiveStatus(0);
-					check=1;
-				}
-				else
-				{
-					check=-1;
+					if(gym.RegistrationSchedule.get(i).getPayment().getPaidStatus()!=0)
+					{
+						DBHandler ins = new DBHandler();
+						ins.CancelMembershipDBHandler(regid);
+						gym.RegistrationSchedule.get(i).setActiveStatus(0);
+						check=1;
+					}
+					else
+					{
+						check=-1;
+					}
 				}
 			}
 		}
