@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="403.0" prefWidth="577.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginHandler">
+   <children>
+      <ImageView disable="true" fitHeight="409.0" fitWidth="759.0" layoutX="-6.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/gradient.png" />
+         </image>
+      </ImageView>
+      <ImageView disable="true" fitHeight="448.0" fitWidth="968.0" layoutX="54.0" layoutY="-24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Cancelled%20event-pana2.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="#f7f7f7" height="14.0" layoutX="324.0" layoutY="98.0" stroke="#f7f7f7" strokeType="INSIDE" width="81.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="#f7f7f7" height="28.0" layoutX="294.0" layoutY="264.0" rotate="-41.3" stroke="#f7f7f7" strokeType="INSIDE" width="46.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="#f7f7f7" height="24.0" layoutX="390.0" layoutY="114.0" rotate="-132.8" stroke="#f7f7f7" strokeType="INSIDE" width="53.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="#f7f7f7" height="55.0" layoutX="320.0" layoutY="257.0" stroke="#f7f7f7" strokeType="INSIDE" width="123.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="#f7f7f7" height="24.0" layoutX="294.0" layoutY="287.0" stroke="#f7f7f7" strokeType="INSIDE" width="53.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="#f7f7f7" height="41.0" layoutX="410.0" layoutY="94.0" stroke="#f7f7f7" strokeType="INSIDE" width="32.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="#f7f7f7" height="14.0" layoutX="358.0" layoutY="194.0" rotate="-41.4" stroke="#f7f7f7" strokeType="INSIDE" width="69.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="#f7f7f7" height="6.0" layoutX="349.0" layoutY="214.0" rotate="-43.4" stroke="#f7f7f7" strokeType="INSIDE" width="40.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="#f7f7f7" height="41.0" layoutX="392.0" layoutY="192.0" stroke="#f7f7f7" strokeType="INSIDE" width="47.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="#f7f7f7" height="41.0" layoutX="411.0" layoutY="180.0" stroke="#f7f7f7" strokeType="INSIDE" width="25.0" />
+      <ImageView disable="true" fitHeight="32.0" fitWidth="54.0" layoutX="388.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/download.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="WHITE" height="24.0" layoutX="320.0" layoutY="61.0" stroke="WHITE" strokeType="INSIDE" width="47.0" />
+      <Text layoutX="303.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registrations" wrappingWidth="81.0">
+         <font>
+            <Font name="Calibri Bold" size="13.0" />
+         </font>
+      </Text>
+      <ImageView disable="true" fitHeight="41.0" fitWidth="47.0" layoutX="391.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/icons8-gym-64.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="307.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="23:00  24:00" wrappingWidth="81.0">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Text>
+      <ImageView disable="true" fitHeight="41.0" fitWidth="46.0" layoutX="533.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/25694.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="530.0" mnemonicParsing="false" onAction="#adminhome" opacity="0.0" prefHeight="41.0" prefWidth="46.0" text="Button" />
+   </children>
+</AnchorPane>

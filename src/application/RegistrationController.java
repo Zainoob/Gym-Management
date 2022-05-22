@@ -21,9 +21,43 @@ public class RegistrationController
 		r.payment.setpaymentDetails(r.getPlanDescription().getFee(), 0);
 		r.setActiveStatus(1);
 		r.setRegDate(new Date());
-		DBHandler ins = new DBHandler();
+    DBHandler ins = new DBHandler();
 		ins.RegistationDBHandler(r);
 		//r.setRegistrationDetails(1, r.payment, r.planDescription);
+	}
+	public int updateregistration(String plan, int regid)
+	{
+		int check=0;
+		for(int i=0;i<gym.RegistrationSchedule.size();i++)
+		{
+			if(gym.RegistrationSchedule.get(i).getRegID()==regid)
+			{
+				
+				gym.RegistrationSchedule.get(i).getPlanDescription().updatePlanDescription(gym.searchPlansCatalogue(plan));
+				check=1;
+			}
+		}
+		return check;
+	}
+	public int cancelregistration(String phonenumber, int regid)
+	{
+		int check=0;
+		for(int i=0;i<gym.RegistrationSchedule.size();i++)
+		{
+			if((gym.RegistrationSchedule.get(i).getRegID()==regid) && gym.RegistrationSchedule.get(i).member.getPhoneNo().compareTo(phonenumber)==0)
+			{
+				if(gym.RegistrationSchedule.get(i).getPayment().getPaidStatus()!=0)
+				{
+					gym.RegistrationSchedule.get(i).setActiveStatus(0);
+					check=1;
+				}
+				else
+				{
+					check=-1;
+				}
+			}
+		}
+		return check;
 	}
 	
 	

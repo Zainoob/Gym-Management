@@ -2,15 +2,14 @@ package application;
 
 import java.util.Date;
 
-public class PaymentController
-{
+public class PaymentController {
 	private static Gym gym;
 
-	public PaymentController() 
+	public PaymentController () 
 	{
 		gym = gym.getInstance();
 	}
-	
+
 	public int GetFee(int regid)
 	{
 		int payment=0;
@@ -23,4 +22,6 @@ public class PaymentController
 		}
 		return payment;
 	}
+
 }
+

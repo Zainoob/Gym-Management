@@ -50,8 +50,16 @@ public class PlanDescription {
 		this.fee=description.fee;
 		this.planID = description.planID;	
 		this.Description=description.Description;
-		DBHandler ins = new DBHandler();
+    DBHandler ins = new DBHandler();
 		ins.PlanDescriptionDBHandler(description);
+		//enter DB HEREE
+	}
+	public void updatePlanDescription(PlanDescription description)
+	{
+		this.fee=description.fee;
+		this.planID = description.planID;	
+		this.Description=description.Description;
+    //update db here
 	}
 	
 }

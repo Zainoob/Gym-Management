@@ -48,6 +48,13 @@ public class LoginHandler {
 	@FXML
 	TextField pass_w = new TextField();
 	
+	@FXML
+	TextField  memberid = new TextField();
+	
+	@FXML
+	TextField name = new TextField();
+	
+	
 
 
 	//username and password
@@ -182,11 +189,54 @@ public class LoginHandler {
 	window.setTitle("View Payments");
 	window.show();
     }
+    
+    @FXML
+    private void  LoadAdminCancelPage(ActionEvent event) throws IOException {
+	Parent CalenderView = FXMLLoader.load(getClass().getResource("CancelMembershipAdmin.fxml"));
+	Scene CalenderScene=  new Scene(CalenderView);
+	Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+	window.setScene(CalenderScene);
+	window.setTitle("");
+	window.show();
+    }
+    
+    @FXML
+    private void  AdminCancelMembership(ActionEvent event) throws IOException {
+    String memid=memberid.getText();
+    String nam = name.getText();
+	Parent CalenderView = FXMLLoader.load(getClass().getResource("CancelMembershipAdminSuccessful.fxml"));
+	Scene CalenderScene=  new Scene(CalenderView);
+	Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+	window.setScene(CalenderScene);
+	window.setTitle("");
+	window.show();
+    }
+    
+    
+    @FXML
+    private void  MembersListView(ActionEvent event) throws IOException {
+	Parent CalenderView = FXMLLoader.load(getClass().getResource("MembersListView.fxml"));
+	Scene CalenderScene=  new Scene(CalenderView);
+	Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+	window.setScene(CalenderScene);
+	window.setTitle("");
+	window.show();
+    }
 	
     
     @FXML
     private void userhome(ActionEvent event) throws IOException {
     	Parent HomeView = FXMLLoader.load(getClass().getResource("UserMenu.fxml"));
+		Scene HomeScene=  new Scene(HomeView);
+		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+		window.setScene(HomeScene);
+		window.setTitle("Gym Management System");
+		window.show();
+    }
+    
+    @FXML
+    private void adminhome(ActionEvent event) throws IOException {
+    	Parent HomeView = FXMLLoader.load(getClass().getResource("AdminMenu.fxml"));
 		Scene HomeScene=  new Scene(HomeView);
 		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
 		window.setScene(HomeScene);
