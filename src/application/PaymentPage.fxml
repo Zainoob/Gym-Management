@@ -30,7 +30,7 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="#505f6e" height="114.0" layoutX="169.0" layoutY="246.0" stroke="#505f6e" strokeType="INSIDE" width="140.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" disable="true" fill="#293643" height="41.0" layoutX="169.0" layoutY="200.0" stroke="#293643" strokeType="INSIDE" width="140.0" />
       <TextField fx:id="regID3" layoutX="176.0" layoutY="259.0" prefHeight="23.0" prefWidth="125.0" promptText="Registration ID" />
-      <Button layoutX="211.0" layoutY="303.0" mnemonicParsing="false" style="-fx-background-color: #ca64ec; -fx-background-radius: 15;" text="Get Fee" textFill="WHITE" />
+      <Button layoutX="211.0" layoutY="303.0" mnemonicParsing="false" onAction="#getFee" style="-fx-background-color: #ca64ec; -fx-background-radius: 15;" text="Get Fee" textFill="WHITE" />
       <Label fx:id="Fee" layoutX="176.0" layoutY="137.0">
          <font>
             <Font name="Calibri Bold" size="12.0" />

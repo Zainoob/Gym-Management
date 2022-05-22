@@ -1,5 +1,6 @@
 package application;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -18,8 +19,8 @@ public class Payment {
 	
 	@Temporal(TemporalType.DATE)
 	private Date datePaid;
-	@Temporal(TemporalType.DATE)
-	private Date dateDue;
+	//@Temporal(TemporalType.DATE)
+	private LocalDate dateDue;
 	
 	int amount;
 	int paidStatus;
@@ -30,7 +31,7 @@ public class Payment {
 		paidStatus=0;
 	}
 	
-	public Payment(Date datePaid, Date dateDue, int amount, int paidStatus) {
+	public Payment(Date datePaid, LocalDate dateDue, int amount, int paidStatus) {
 		super();
 		this.datePaid = datePaid;
 		this.dateDue = dateDue;
@@ -42,7 +43,9 @@ public class Payment {
 	{
 		this.amount = amount;
 		this.paidStatus = paidStatus;
-		//DB HERE
+		this.dateDue = LocalDate.now().plusMonths(1);
+		DBHandler ins = new DBHandler();
+		ins.PaymentDBHandler(this);
 	}
 	public int getPaymentID() {
 		return paymentID;
@@ -56,10 +59,10 @@ public class Payment {
 	public void setDatePaid(Date datePaid) {
 		this.datePaid = datePaid;
 	}
-	public Date getDateDue() {
+	public LocalDate getDateDue() {
 		return dateDue;
 	}
-	public void setDateDue(Date dateDue) {
+	public void setDateDue(LocalDate dateDue) {
 		this.dateDue = dateDue;
 	}
 	public int getAmount() {
@@ -75,6 +78,4 @@ public class Payment {
 		this.paidStatus = paidStatus;
 	}
 	
-	
-
 }

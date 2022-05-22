@@ -17,6 +17,8 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
+			DBHandler ins = new DBHandler();
+			ins.Initialize();
 			window = primaryStage;
 			Parent root = FXMLLoader.load(getClass().getResource("Welcome.fxml"));
 			Scene scene =  new Scene(root);

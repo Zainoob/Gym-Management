@@ -14,6 +14,7 @@ public class Gym {
     List<Registration> RegistrationSchedule=new ArrayList<Registration>();
     List<PlanDescription> PlansCatalogue=new ArrayList<PlanDescription>();
     List<Feedback> Feedbacks=new ArrayList<Feedback>();
+    //List<Member> Members = new ArrayList<Member>();
     
     private static Gym gym = null; 
     private Gym() {
