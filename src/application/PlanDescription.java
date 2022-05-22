@@ -32,8 +32,14 @@ public class PlanDescription {
 	{
 		Description = description;
 		this.fee = fee;
-		this.planID = planid;
-		
+		this.planID = planid;	
+	}
+	public void setPlanDescription(PlanDescription description)
+	{
+		this.fee=description.fee;
+		this.planID = description.planID;	
+		this.Description=description.Description;
+		//DB HEREE
 	}
 	
 }

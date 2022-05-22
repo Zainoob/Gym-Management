@@ -25,6 +25,8 @@ public class Member {
 		this.cnic = cnic;
 		this.PhoneNo = phoneNo;
 		this.password = password;
+		DBHandler ins = new DBHandler();
+		ins.MemberDBHandler(this);
 	}
 	public int getMemberID() {
 		return memberID;

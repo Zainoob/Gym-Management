@@ -1,5 +1,8 @@
 package application;
 
+import java.util.List;
+
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -30,7 +33,24 @@ public class DBHandler
 		
 		session.close();
 	}
-	
+	public List FetchMemberProfile(int id)
+	{
+		SessionFactory factory = new Configuration().configure().buildSessionFactory();
+		Session session = factory.openSession();
+		String query = "from Member m where m.memberID = "+String.valueOf(id);
+		Query q=session.createQuery(query);
+		List<Member> list=q.list(); 
+		return q.list();
+	}
+	public List FetchAllMembers()
+	{
+		SessionFactory factory = new Configuration().configure().buildSessionFactory();
+		Session session = factory.openSession();
+		String query = "from Member";
+		Query q=session.createQuery(query);
+		List<Member> list=q.list(); 
+		return q.list();
+	}
 	public void MemberDBHandler(Member obj)
 	{
 		SessionFactory factory = new Configuration().configure().buildSessionFactory();
