@@ -23,9 +23,10 @@ public class Registration {
 	
 	public Registration() 
 	{
+		this.planDescription = new PlanDescription();
 		this.payment = new Payment();
 		this.member = new Member();
-		this.planDescription = new PlanDescription();	
+			
 		activeStatus=0;
 	}
 	
@@ -37,18 +38,6 @@ public class Registration {
 		DBHandler ins = new DBHandler();
 		
 	}
-
-	public void setMemberDetails(String name, int age, long cnic, String phoneno, String password)
-	{
-		this.member.setName(name);
-		this.member.setAge(age);
-		this.member.setCnic(cnic);
-		this.member.setPhoneNo(phoneno);
-		this.member.setPassword(password);
-		DBHandler ins = new DBHandler();
-		ins.MemberDBHandler(member);
-	}
-
 
 	public int getRegID() {
 		return RegID;

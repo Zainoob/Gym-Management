@@ -19,5 +19,4 @@ public class LoginController
 		f.setFeedback(feed,dateadded);
 		gym.Feedbacks.add(f);
 	}
-	
 }

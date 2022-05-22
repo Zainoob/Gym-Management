@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="422.0" prefWidth="610.0" style="-fx-background-color: #ab80cf;" stylesheets="@application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginHandler">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="422.0" prefWidth="610.0" style="-fx-background-color: #ab80cf;" stylesheets="@application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MemberHandler">
    <children>
       <ImageView fitHeight="442.0" fitWidth="610.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -33,7 +33,7 @@
             <Image url="@Images/25694.png" />
          </image>
       </ImageView>
-      <Button fx:id="Home" layoutX="558.0" layoutY="3.0" mnemonicParsing="false" onAction="#home" opacity="0.0" prefHeight="44.0" prefWidth="45.0" />
+      <Button layoutX="558.0" layoutY="3.0" mnemonicParsing="false" onAction="#userhome" opacity="0.0" prefHeight="44.0" prefWidth="45.0" />
       <TextField fx:id="pass_w" layoutX="244.0" layoutY="188.0" prefHeight="25.0" prefWidth="149.0" promptText="PASSWORD" style="-fx-border-color: black;">
          <font>
             <Font size="11.0" />

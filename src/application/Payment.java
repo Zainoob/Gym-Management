@@ -27,6 +27,7 @@ public class Payment {
 	{
 		this.amount = amount;
 		this.paidStatus = paidStatus;
+		//DB HERE
 	}
 	public int getPaymentID() {
 		return paymentID;

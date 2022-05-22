@@ -60,25 +60,7 @@ public class LoginHandler {
 		gym = gym.getInstance();
 	}
 
-    @FXML
-    private void LogIn(ActionEvent event) throws IOException {
-
-    	String username = user_n.getText();
-        String password = pass_w.getText();
-        if (username.equals(str1) && password.equals(str2)) {
-
-        	Parent CalenderView = FXMLLoader.load(getClass().getResource("UserMenu.fxml"));
-    		Scene CalenderScene=  new Scene(CalenderView);
-    		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-    		window.setScene(CalenderScene);
-    		window.setTitle("Admin Menu");
-    		window.show();
-        }
-        
-        else {
-        	prompt.setText("Invalid username or password");
-        }     
-    }
+    
 
     @FXML
     private void Enter_Feedback(ActionEvent event) throws IOException {
