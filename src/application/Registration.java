@@ -2,21 +2,51 @@ package application;
 
 import java.util.Date;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+@Entity
 public class Registration {
-	int RegID;
-	int activeStatus;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int RegID;
+	
+	private int activeStatus;
+	
+	@Temporal(TemporalType.DATE)
+	private Date regDate;
+	
+	@OneToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name="memberID")
 	Member member;
-	Date regDate;
+	
+	
+	
+	@OneToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name="plandesc_id")
 	PlanDescription planDescription;
+	
+	@OneToOne(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
+    @JoinColumn(name="paymentID")
 	Payment payment;
 
 	
-	public Registration(int regid, int activestatus,Payment payment, PlanDescription planDescription, Member member)
+	public Registration(int regid,Date regdate, int activestatus,Payment payment, PlanDescription planDescription, Member member)
 	{
 		this.member = member;
 		this.planDescription = planDescription;
 		this.payment = payment;
 		RegID = regid;
+		regDate = regdate;
 		activeStatus = activestatus;	
 	}
 	
@@ -30,12 +60,14 @@ public class Registration {
 		activeStatus=0;
 	}
 	
-	public void setRegistrationDetails(int activestatus,Payment payment, PlanDescription planDescription)
+	public void setRegistrationDetails(int activestatus,Date regdate,Payment payment, PlanDescription planDescription)
 	{
 		this.planDescription = planDescription;
 		this.payment = payment;
 		activeStatus = activestatus;	
-		DBHandler ins = new DBHandler();
+		regDate=regdate;
+		//DBHandler ins = new DBHandler();
+		//ins.RegistationDBHandler(this);
 		
 	}
 

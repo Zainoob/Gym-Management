@@ -137,7 +137,8 @@ public class MemberHandler implements Initializable{
 
     	String username = user_n.getText();
         String password = pass_w.getText();
-        memberid=gym.validateUser(username, password);
+        LoginController c = new LoginController();
+        memberid=c.validateUser(username, password);
         //user can enter his own name and password now to enter
         if (memberid>0) {
 
@@ -271,6 +272,7 @@ public class MemberHandler implements Initializable{
 	
 	@FXML
 	private void getFee(ActionEvent event) throws IOException {
+
 		PaymentController  rc=new PaymentController ();
 		int fee = rc.GetFee(Integer.parseInt(regID3.getText()));
 		if (fee > 0) {

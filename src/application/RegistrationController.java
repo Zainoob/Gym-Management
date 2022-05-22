@@ -21,9 +21,9 @@ public class RegistrationController
 		r.payment.setpaymentDetails(r.getPlanDescription().getFee(), 0);
 		r.setActiveStatus(1);
 		r.setRegDate(new Date());
-		//r.setRegistrationDetails(age, null, null, null);
-		//r.setMemberDetail(feed,dateadded)
-		//gym.Feedbacks.add(f);
+    DBHandler ins = new DBHandler();
+		ins.RegistationDBHandler(r);
+		//r.setRegistrationDetails(1, r.payment, r.planDescription);
 	}
 	public int updateregistration(String plan, int regid)
 	{
@@ -59,5 +59,6 @@ public class RegistrationController
 		}
 		return check;
 	}
+	
 	
 }

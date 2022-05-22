@@ -1,7 +1,18 @@
 package application;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class PlanDescription {
+	
+	//@Id
+	//@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id
 	int planID;
+	
 	String Description;//Description of the offer e.g weekly monthly yearly
 	int fee;
 	public int getPlanID() {
@@ -39,6 +50,8 @@ public class PlanDescription {
 		this.fee=description.fee;
 		this.planID = description.planID;	
 		this.Description=description.Description;
+    DBHandler ins = new DBHandler();
+		ins.PlanDescriptionDBHandler(description);
 		//enter DB HEREE
 	}
 	public void updatePlanDescription(PlanDescription description)
@@ -46,7 +59,7 @@ public class PlanDescription {
 		this.fee=description.fee;
 		this.planID = description.planID;	
 		this.Description=description.Description;
-		//update DB HEREE
+    //update db here
 	}
 	
 }
