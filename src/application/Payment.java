@@ -2,10 +2,25 @@ package application;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+@Entity
 public class Payment {
-	int paymentID;
-	Date datePaid;
-	Date dateDue;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int paymentID;
+	
+	@Temporal(TemporalType.DATE)
+	private Date datePaid;
+	@Temporal(TemporalType.DATE)
+	private Date dateDue;
+	
 	int amount;
 	int paidStatus;
 	

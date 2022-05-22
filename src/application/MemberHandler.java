@@ -129,7 +129,8 @@ public class MemberHandler implements Initializable{
 
     	String username = user_n.getText();
         String password = pass_w.getText();
-        memberid=gym.validateUser(username, password);
+        LoginController c = new LoginController();
+        memberid=c.validateUser(username, password);
         //user can enter his own name and password now to enter
         if (memberid>0) {
 
@@ -223,8 +224,8 @@ public class MemberHandler implements Initializable{
 	
 	@FXML
 	private void getFee(ActionEvent event) throws IOException {
-		RegistrationController rc=new RegistrationController();
-		int fee = rc.GetFee(Integer.parseInt(regID3.getText()));
+		PaymentController p=new PaymentController();
+		int fee = p.GetFee(Integer.parseInt(regID3.getText()));
 		if (fee > 0) {
 			Fee.setText("Your payment is " + String.valueOf(fee)+"Rs");
 			pprompt.setText("");
@@ -236,7 +237,6 @@ public class MemberHandler implements Initializable{
 		{
 			pprompt.setText("*This registration is already paid for");
 		}
-
 	}
 	
 	@FXML
