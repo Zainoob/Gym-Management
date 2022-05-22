@@ -17,8 +17,8 @@ public class Payment {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int paymentID;
 	
-	@Temporal(TemporalType.DATE)
-	private Date datePaid;
+	
+	private LocalDate datePaid;
 	//@Temporal(TemporalType.DATE)
 	private LocalDate dateDue;
 	
@@ -31,7 +31,7 @@ public class Payment {
 		paidStatus=0;
 	}
 	
-	public Payment(Date datePaid, LocalDate dateDue, int amount, int paidStatus) {
+	public Payment(LocalDate datePaid, LocalDate dateDue, int amount, int paidStatus) {
 		super();
 		this.datePaid = datePaid;
 		this.dateDue = dateDue;
@@ -53,10 +53,10 @@ public class Payment {
 	public void setPaymentID(int paymentID) {
 		this.paymentID = paymentID;
 	}
-	public Date getDatePaid() {
+	public LocalDate getDatePaid() {
 		return datePaid;
 	}
-	public void setDatePaid(Date datePaid) {
+	public void setDatePaid(LocalDate datePaid) {
 		this.datePaid = datePaid;
 	}
 	public LocalDate getDateDue() {

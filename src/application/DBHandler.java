@@ -1,5 +1,6 @@
 package application;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.hibernate.Query;
@@ -91,10 +92,27 @@ public class DBHandler
 		SessionFactory factory = new Configuration().configure().buildSessionFactory();
 		
 		Session session = factory.openSession();
-	
 		
 		session.beginTransaction();
 		session.save(obj);
+		session.getTransaction().commit();
+		
+		session.close();
+		factory.close();
+	}
+	
+	public void UpdatePlanDescriptionDBHandler(PlanDescription obj)
+	{
+		SessionFactory factory = new Configuration().configure().buildSessionFactory();
+		
+		Session session = factory.openSession();
+	
+		session.beginTransaction();
+		Query q = session.createQuery("update PlanDescription set fee=:newFee,planID=:newID,Description=:newDesc");
+		q.setParameter("newFee", obj.fee);
+		q.setParameter("newID", obj.planID);
+		q.setParameter("newDesc", obj.Description);
+		int r = q.executeUpdate();
 		session.getTransaction().commit();
 		
 		session.close();
@@ -116,4 +134,40 @@ public class DBHandler
 		factory.close();
 	}
 	
-}
+	public void PaymentMadeDBHandler(int id)
+	{
+		SessionFactory factory = new Configuration().configure().buildSessionFactory();
+		
+		Session session = factory.openSession();
+		
+		
+		session.beginTransaction();
+		Query q = session.createQuery("update Payment set datePaid=:newDate,paidStatus=:newStatus where paymentID=:p");
+		q.setParameter("newDate", LocalDate.now());
+		q.setParameter("newStatus", 1);
+		q.setParameter("p", id);
+		int r = q.executeUpdate();
+		session.getTransaction().commit();
+		
+		session.close();
+		factory.close();
+	}
+	
+	public void CancelMembershipDBHandler(int id)
+	{
+		SessionFactory factory = new Configuration().configure().buildSessionFactory();
+		Session session = factory.openSession();
+		
+		session.beginTransaction();
+		Query q = session.createQuery("update Registration set activeStatus=:newStatus where RegID=:p");
+		q.setParameter("newStatus", 0);
+		q.setParameter("p", id);
+		int r = q.executeUpdate();
+		session.getTransaction().commit();
+		
+		session.close();
+		factory.close();
+	
+	}
+	
+} 

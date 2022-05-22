@@ -168,7 +168,7 @@ public class MemberHandler implements Initializable{
     	{
     		prompt2.setText("");
     		int check=rc.cancelregistration(phon, reg);
-    		if(check!=-1)
+    		if(check==1)
     		{
 		    	Parent HomeView = FXMLLoader.load(getClass().getResource("CancellationSuccessful.fxml"));
 				Scene HomeScene=  new Scene(HomeView);
@@ -273,8 +273,8 @@ public class MemberHandler implements Initializable{
 	@FXML
 	private void getFee(ActionEvent event) throws IOException {
 
-		PaymentController  rc=new PaymentController ();
-		int fee = rc.GetFee(Integer.parseInt(regID3.getText()));
+		PaymentController  p=new PaymentController ();
+		int fee = p.GetFee(Integer.parseInt(regID3.getText()));
 		if (fee > 0) {
 			Fee.setText("Your payment is " + String.valueOf(fee)+"Rs");
 			pprompt.setText("");
@@ -282,7 +282,7 @@ public class MemberHandler implements Initializable{
 		} else if(fee==0){
 			pprompt.setText("*Registration not found");
 		}
-		else if(fee==-1)
+		else if(fee == -1)
 		{
 			pprompt.setText("*This registration is already paid for");
 		}
@@ -296,6 +296,8 @@ public class MemberHandler implements Initializable{
 		window.setScene(HomeScene);
 		window.setTitle("Gym Management System");
 		window.show();
+		PaymentController p = new PaymentController();
+		p.Paid(Integer.parseInt(regID3.getText()));
     }
 	@Override
 	public void initialize(URL Location, ResourceBundle resources) {

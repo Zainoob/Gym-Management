@@ -16,11 +16,6 @@
             <Image url="@Images/WhatsApp%20Image%202022-03-24%20at%206.40.51%20PM.jpeg" />
          </image>
       </ImageView>
-      <Button layoutX="359.0" layoutY="273.0" mnemonicParsing="false" onAction="#LogIn" style="-fx-background-radius: 20; -fx-background-color: #8824b9;" text="Sign Up" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Button>
       <ImageView disable="true" fitHeight="646.0" fitWidth="646.0" layoutX="-23.0" layoutY="-104.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/Gym-bro.png" />
