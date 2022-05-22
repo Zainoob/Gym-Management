@@ -39,7 +39,14 @@ public class PlanDescription {
 		this.fee=description.fee;
 		this.planID = description.planID;	
 		this.Description=description.Description;
-		//DB HEREE
+		//enter DB HEREE
+	}
+	public void updatePlanDescription(PlanDescription description)
+	{
+		this.fee=description.fee;
+		this.planID = description.planID;	
+		this.Description=description.Description;
+		//update DB HEREE
 	}
 	
 }

@@ -25,17 +25,39 @@ public class RegistrationController
 		//r.setMemberDetail(feed,dateadded)
 		//gym.Feedbacks.add(f);
 	}
-	public int GetFee(int regid)
+	public int updateregistration(String plan, int regid)
 	{
-		int payment=0;
-		for(int i= 0;i<gym.RegistrationSchedule.size();i++)
+		int check=0;
+		for(int i=0;i<gym.RegistrationSchedule.size();i++)
 		{
 			if(gym.RegistrationSchedule.get(i).getRegID()==regid)
 			{
-				payment=gym.RegistrationSchedule.get(i).getPayment().getAmount();
+				
+				gym.RegistrationSchedule.get(i).getPlanDescription().updatePlanDescription(gym.searchPlansCatalogue(plan));
+				check=1;
 			}
 		}
-		return payment;
+		return check;
+	}
+	public int cancelregistration(String phonenumber, int regid)
+	{
+		int check=0;
+		for(int i=0;i<gym.RegistrationSchedule.size();i++)
+		{
+			if((gym.RegistrationSchedule.get(i).getRegID()==regid) && gym.RegistrationSchedule.get(i).member.getPhoneNo().compareTo(phonenumber)==0)
+			{
+				if(gym.RegistrationSchedule.get(i).getPayment().getPaidStatus()!=0)
+				{
+					gym.RegistrationSchedule.get(i).setActiveStatus(0);
+					check=1;
+				}
+				else
+				{
+					check=-1;
+				}
+			}
+		}
+		return check;
 	}
 	
 }

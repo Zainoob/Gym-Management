@@ -39,7 +39,7 @@ public class MemberHandler implements Initializable{
 		
 		
 		@FXML
-		TextField email = new TextField();
+		TextField phone = new TextField();
 	
 		DBHandler db=new DBHandler();
 		
@@ -71,6 +71,14 @@ public class MemberHandler implements Initializable{
 		
 		@FXML
 		Label  pprompt = new Label();
+		
+		@FXML
+		Label  prompt1 = new Label();
+		
+		@FXML
+		Label  prompt2 = new Label();
+		
+		
 		
 		
 		//username and password
@@ -147,15 +155,38 @@ public class MemberHandler implements Initializable{
     }
 	@FXML
     private void CancelMembership(ActionEvent event) throws IOException {
-		RegistrationController rc = new RegistrationController();
+		
 		int reg=Integer.parseInt(regID.getText());
-		String mail=email.getText();
-    	Parent HomeView = FXMLLoader.load(getClass().getResource("CancellationSuccessful.fxml"));
-		Scene HomeScene=  new Scene(HomeView);
-		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-		window.setScene(HomeScene);
-		window.setTitle("Gym Management System");
-		window.show();
+		String phon=phone.getText();
+		RegistrationController rc= new RegistrationController();
+		if(regID.getText().isEmpty() || phone.getText().isEmpty())
+    	{
+    		prompt2.setText("*Please fill all fields");
+    	}
+    	else
+    	{
+    		prompt2.setText("");
+    		int check=rc.cancelregistration(phon, reg);
+    		if(check!=-1)
+    		{
+		    	Parent HomeView = FXMLLoader.load(getClass().getResource("CancellationSuccessful.fxml"));
+				Scene HomeScene=  new Scene(HomeView);
+				Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+				window.setScene(HomeScene);
+				window.setTitle("Gym Management System");
+				window.show();
+    		}
+    		else if(check==-1)
+    		{
+    			prompt2.setText("");
+        		prompt2.setText("Membership has not been paid for!");
+    		}
+    		else
+    		{
+    			prompt2.setText("");
+    			prompt2.setText("Mmebership not found");
+    		}
+    	}
     }
 	@FXML
     private void LoadCancelMembershipPage(ActionEvent event) throws IOException {
@@ -180,12 +211,29 @@ public class MemberHandler implements Initializable{
 		
 		int reg=Integer.parseInt(regID2.getText());
 		String plan=descBox.getValue();
-    	Parent HomeView = FXMLLoader.load(getClass().getResource("UpdateMembershipSuccessful.fxml"));
-		Scene HomeScene=  new Scene(HomeView);
-		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-		window.setScene(HomeScene);
-		window.setTitle("Gym Management System");
-		window.show();
+		RegistrationController rc= new RegistrationController();
+		if(regID2.getText().isEmpty() || descBox.getValue() == null)
+    	{
+    		prompt1.setText("*Please fill all fields");
+    	}
+    	else
+    	{
+    		prompt1.setText("");
+			int check=rc.updateregistration(plan, reg);
+			if(check>0)
+			{
+	    	Parent HomeView = FXMLLoader.load(getClass().getResource("UpdateMembershipSuccessful.fxml"));
+			Scene HomeScene=  new Scene(HomeView);
+			Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+			window.setScene(HomeScene);
+			window.setTitle("Gym Management System");
+			window.show();
+			}
+			else
+			{
+				prompt1.setText("Registration ID not found!");
+			}
+    	}
     }
 	
 	@FXML
@@ -223,7 +271,7 @@ public class MemberHandler implements Initializable{
 	
 	@FXML
 	private void getFee(ActionEvent event) throws IOException {
-		RegistrationController rc=new RegistrationController();
+		PaymentController  rc=new PaymentController ();
 		int fee = rc.GetFee(Integer.parseInt(regID3.getText()));
 		if (fee > 0) {
 			Fee.setText("Your payment is " + String.valueOf(fee)+"Rs");
@@ -236,7 +284,6 @@ public class MemberHandler implements Initializable{
 		{
 			pprompt.setText("*This registration is already paid for");
 		}
-
 	}
 	
 	@FXML
