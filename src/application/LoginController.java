@@ -36,5 +36,21 @@ public class LoginController
 			}
 		}
 		return id;
+		/*
+		int id=0;
+		for(int i=0;i<gym.RegistrationSchedule.size();i++)
+		{
+			if(username.compareTo(gym.RegistrationSchedule.get(i).member.getName())==0 && password.compareTo(gym.RegistrationSchedule.get(i).member.getPassword())==0)
+			{
+				id= gym.RegistrationSchedule.get(i).member.getMemberID();
+			}
+		}
+		for(int i=0;i<gym.RegistrationSchedule.size();i++)
+		{
+			System.out.print(gym.RegistrationSchedule.get(i).member.getName());
+			
+		}
+		return id;
+		*/
 	}
 }

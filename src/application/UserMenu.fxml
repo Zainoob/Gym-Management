@@ -16,7 +16,6 @@
             <Image url="@Images/Fitness%20stats-amico.png" />
          </image>
       </ImageView>
-      <Button layoutX="403.0" layoutY="64.0" mnemonicParsing="false" onAction="#ViewFacilities" prefHeight="68.0" prefWidth="71.0" style="-fx-background-radius: 37; -fx-background-color: white;" />
       <Button layoutX="367.0" layoutY="199.0" mnemonicParsing="false" onAction="#ViewMembershipPlans" prefHeight="68.0" prefWidth="71.0" style="-fx-background-radius: 37; -fx-background-color: white;">
          <font>
             <Font name="System Bold" size="12.0" />
@@ -34,11 +33,6 @@
          </font>
       </Button>
       <Text disable="true" layoutX="388.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Plans">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Text>
-      <Text disable="true" layoutX="414.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Facilities">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -75,6 +69,12 @@
       <Line disable="true" endX="-87.20002746582031" endY="0.507080078125" layoutX="304.0" layoutY="241.0" startX="-104.89289855957031" startY="0.507080078125" stroke="#b574c7" />
       <Circle disable="true" fill="#b574c7" layoutX="217.0" layoutY="242.0" radius="3.0" stroke="#b574c7" strokeLineCap="ROUND" strokeType="INSIDE" />
       <Text disable="true" layoutX="103.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Button layoutX="402.0" layoutY="63.0" mnemonicParsing="false" onAction="#ViewFacilities" prefHeight="68.0" prefWidth="71.0" style="-fx-background-radius: 37; -fx-background-color: white;" />
+      <Text disable="true" layoutX="413.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Facilities">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

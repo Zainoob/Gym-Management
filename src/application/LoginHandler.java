@@ -43,6 +43,9 @@ public class LoginHandler {
 	Label prompt = new Label();
 	
 	@FXML
+	Label prompt2 = new Label();
+	
+	@FXML
 	TextField  user_n = new TextField();
 	
 	@FXML
@@ -76,10 +79,11 @@ public class LoginHandler {
     	Date d = new Date();
     	if(feedback.getText().isEmpty())
     	{
-    		prompt.setText("*Feedback is empty");
+    		Prompt.setText("*Feedback is empty");
     	}
     	else
     	{
+    		Prompt.setText("");
     		c.feedback(feedbackk, d);
     		Parent CalenderView = FXMLLoader.load(getClass().getResource("UserMenu.fxml"));
     		Scene CalenderScene=  new Scene(CalenderView);
@@ -142,7 +146,7 @@ public class LoginHandler {
     	String username = user_n.getText();
         String password = pass_w.getText();
         if (username.equals(str1) && password.equals(str2)) {
-
+        	prompt2.setText("");
         	Parent CalenderView = FXMLLoader.load(getClass().getResource("AdminMenu.fxml"));
     		Scene CalenderScene=  new Scene(CalenderView);
     		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
@@ -152,7 +156,7 @@ public class LoginHandler {
         }
         
         else {
-        	prompt.setText("Invalid username or password");
+        	prompt2.setText("Invalid username or password");
         }     
     }
     
