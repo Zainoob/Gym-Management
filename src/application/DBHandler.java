@@ -58,6 +58,24 @@ public class DBHandler
 		List<Member> list=q.list(); 
 		return q.list();
 	}
+	public List FetchAllFeedback()
+	{
+		SessionFactory factory = new Configuration().configure().buildSessionFactory();
+		Session session = factory.openSession();
+		String query = "from Feedback";
+		Query q=session.createQuery(query);
+		List<Member> list=q.list(); 
+		return q.list();
+	}
+	public List FetchAllPayments()
+	{
+		SessionFactory factory = new Configuration().configure().buildSessionFactory();
+		Session session = factory.openSession();
+		String query = "from Payment";
+		Query q=session.createQuery(query);
+		List<Member> list=q.list(); 
+		return q.list();
+	}
 	public void MemberDBHandler(Member obj)
 	{
 		SessionFactory factory = new Configuration().configure().buildSessionFactory();

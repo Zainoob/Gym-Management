@@ -52,10 +52,10 @@ public class LoginHandler {
 	TextField pass_w = new TextField();
 	
 	@FXML
-	TextField  memberid = new TextField();
+	TextField  regID = new TextField();
 	
 	@FXML
-	TextField name = new TextField();
+	TextField phone = new TextField();
 	
 	
 
@@ -85,7 +85,7 @@ public class LoginHandler {
     	{
     		Prompt.setText("");
     		c.feedback(feedbackk, d);
-    		Parent CalenderView = FXMLLoader.load(getClass().getResource("UserMenu.fxml"));
+    		Parent CalenderView = FXMLLoader.load(getClass().getResource("FeedbackSuccessful.fxml"));
     		Scene CalenderScene=  new Scene(CalenderView);
     		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
     		window.setScene(CalenderScene);
@@ -138,6 +138,15 @@ public class LoginHandler {
 		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
 		window.setScene(CalenderScene);
 		window.setTitle("Feedback Form");
+		window.show();
+    }
+    @FXML
+    private void  ViewFeedback(ActionEvent event) throws IOException {
+    	Parent CalenderView = FXMLLoader.load(getClass().getResource("FeedbackView.fxml"));
+		Scene CalenderScene=  new Scene(CalenderView);
+		Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+		window.setScene(CalenderScene);
+		window.setTitle("Feedback View");
 		window.show();
     }
     @FXML
@@ -206,20 +215,48 @@ public class LoginHandler {
     
     @FXML
     private void  AdminCancelMembership(ActionEvent event) throws IOException {
-    String memid=memberid.getText();
-    String nam = name.getText();
-	Parent CalenderView = FXMLLoader.load(getClass().getResource("CancelMembershipAdminSuccessful.fxml"));
-	Scene CalenderScene=  new Scene(CalenderView);
-	Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-	window.setScene(CalenderScene);
-	window.setTitle("");
-	window.show();
+    	int reg=Integer.parseInt(regID.getText());
+		String phon=phone.getText();
+		RegistrationController rc= new RegistrationController();
+		if(regID.getText().isEmpty() || phone.getText().isEmpty())
+    	{
+    		prompt2.setText("*Please fill all fields");
+    	}
+    	else
+    	{
+    		prompt2.setText("");
+    		int check=rc.cancelregistration(phon, reg);
+    		if(check==1 ||check==-1)
+    		{
+		    	Parent HomeView = FXMLLoader.load(getClass().getResource("CancelMembershipAdminSuccessful.fxml"));
+				Scene HomeScene=  new Scene(HomeView);
+				Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+				window.setScene(HomeScene);
+				window.setTitle("Gym Management System");
+				window.show();
+    		}
+    		else
+    		{
+    			prompt2.setText("");
+    			prompt2.setText("Membership not found");
+    		}
+    	}
     }
     
     
     @FXML
     private void  MembersListView(ActionEvent event) throws IOException {
 	Parent CalenderView = FXMLLoader.load(getClass().getResource("MembersListView.fxml"));
+	Scene CalenderScene=  new Scene(CalenderView);
+	Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+	window.setScene(CalenderScene);
+	window.setTitle("");
+	window.show();
+    }
+	
+    @FXML
+    private void  PaymentsListView(ActionEvent event) throws IOException {
+	Parent CalenderView = FXMLLoader.load(getClass().getResource("PaymentView.fxml"));
 	Scene CalenderScene=  new Scene(CalenderView);
 	Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
 	window.setScene(CalenderScene);

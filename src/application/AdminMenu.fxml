@@ -5,6 +5,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="479.0" prefWidth="527.0" style="-fx-background-color: FF7A5E;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginHandler">
    <children>
@@ -17,16 +18,12 @@
          <font>
             <Font name="SansSerif Bold" size="12.0" />
          </font></Button>
-      <Button layoutX="367.0" layoutY="199.0" mnemonicParsing="false" onAction="#AdminPaymentsPage" prefHeight="68.0" prefWidth="71.0" styleClass="AdminPaymentsButton" stylesheets="@Style.css" text="Payments">
+      <Button layoutX="367.0" layoutY="199.0" mnemonicParsing="false" onAction="#PaymentsListView" prefHeight="68.0" prefWidth="71.0" styleClass="AdminPaymentsButton" stylesheets="@Style.css" text="Payments">
          <font>
             <Font name="SansSerif Bold" size="11.0" />
          </font>
       </Button>
-      <Button layoutX="393.0" layoutY="325.0" mnemonicParsing="false" onAction="#Give_Feedback" prefHeight="68.0" prefWidth="71.0" styleClass="TotalMonthlyRevenueButton" stylesheets="@Style.css" text="Total Monthly Revenue" textAlignment="CENTER" wrapText="true">
-         <font>
-            <Font name="SansSerif Bold" size="12.0" />
-         </font></Button>
-      <Button layoutX="132.0" layoutY="359.0" mnemonicParsing="false" onAction="#LoadAdminCancelPage" prefHeight="68.0" prefWidth="71.0" styleClass="CancelMembership" stylesheets="@Style.css" text="Cancel Membership" textAlignment="CENTER" wrapText="true">
+      <Button layoutX="132.0" layoutY="359.0" mnemonicParsing="false" onAction="#LoadAdminCancelPage" prefHeight="68.0" prefWidth="71.0" styleClass="CancelMembership" stylesheets="@Style.css" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -37,5 +34,29 @@
             <Image url="@Images/25694.png" />
          </image>
       </ImageView>
+      <Text disable="true" layoutX="149.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cancel">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text disable="true" layoutX="132.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Membership" wrappingWidth="71.20000000000005">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Button layoutX="393.0" layoutY="325.0" mnemonicParsing="false" onAction="#ViewFeedback" prefHeight="68.0" prefWidth="71.0" styleClass="TotalMonthlyRevenueButton" stylesheets="@Style.css" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="SansSerif Bold" size="12.0" />
+         </font></Button>
+      <Text disable="true" layoutX="412.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View ">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Text>
+      <Text disable="true" layoutX="400.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Feedback">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

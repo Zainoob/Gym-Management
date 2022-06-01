@@ -13,8 +13,9 @@ public class RegistrationController
 		gym = gym.getInstance();
 	}
 
-	public void registration(String plan, String name, int age, Long cnic, String phoneno,String password)
+	public int registration(String plan, String name, int age, Long cnic, String phoneno,String password)
 	{
+		int id=0;
 		Registration r = new Registration();
 		r.member.setmemberDetails(name, age, cnic, phoneno, password);
 		r.planDescription.setPlanDescription(gym.searchPlansCatalogue(plan));
@@ -25,6 +26,8 @@ public class RegistrationController
 		ins.RegistationDBHandler(r);
 		//r.setRegistrationDetails(1, r.payment, r.planDescription);
 		gym.RegistrationSchedule.add(r);
+		id=r.getRegID();
+		return id;
 	}
 	public int updateregistration(String plan, int regid)
 	{

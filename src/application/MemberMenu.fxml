@@ -4,8 +4,6 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Circle?>
-<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -13,7 +11,7 @@
    <children>
       <ImageView disable="true" fitHeight="479.0" fitWidth="484.0" layoutX="24.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Images/Fitness%20stats-amico.png" />
+            <Image url="@Images/fff.png" />
          </image>
       </ImageView>
       <Button layoutX="403.0" layoutY="64.0" mnemonicParsing="false" onAction="#MemberProfileView" prefHeight="68.0" prefWidth="71.0" style="-fx-background-radius: 37; -fx-background-color: white;" />
@@ -53,16 +51,7 @@
             <Image url="@Images/25694.png" />
          </image>
       </ImageView>
-      <Circle disable="true" fill="#b574c7" layoutX="119.0" layoutY="233.0" radius="36.5" stroke="#b574c7" strokeLineCap="ROUND" strokeType="INSIDE" />
-      <Line disable="true" endX="-83.59999084472656" endY="-3.0517578125E-5" layoutX="266.0" layoutY="233.0" startX="-110.00001525878906" startY="-3.0517578125E-5" stroke="#b574c7" />
-      <Button layoutX="83.0" layoutY="199.0" mnemonicParsing="false" onAction="#ExtendMembership" prefHeight="68.0" prefWidth="71.0" style="-fx-background-radius: 37; -fx-background-color: white;">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Button>
       <Button layoutX="481.0" layoutY="3.0" mnemonicParsing="false" onAction="#userhome" opacity="0.0" prefHeight="44.0" prefWidth="45.0" />
-      <Line disable="true" endX="-97.59999084472656" endY="8.79998779296875" layoutX="296.0" layoutY="232.0" startX="-112.80000305175781" startY="0.79998779296875" stroke="#b574c7" />
-      <Line disable="true" endX="-87.20002746582031" endY="0.507080078125" layoutX="304.0" layoutY="241.0" startX="-104.89289855957031" startY="0.507080078125" stroke="#b574c7" />
       <Text disable="true" layoutX="387.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Make">
          <font>
             <Font name="System Bold" size="12.0" />
@@ -78,11 +67,6 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <Text disable="true" layoutX="83.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Membership">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Text>
       <Text disable="true" layoutX="154.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Plan">
          <font>
             <Font name="System Bold" size="12.0" />
@@ -93,11 +77,5 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <Text disable="true" layoutX="96.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Extend">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Text>
-      <Circle disable="true" fill="#b574c7" layoutX="217.0" layoutY="242.0" radius="3.0" stroke="#b574c7" strokeLineCap="ROUND" strokeType="INSIDE" />
    </children>
 </AnchorPane>

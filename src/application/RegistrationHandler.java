@@ -65,11 +65,13 @@ public class RegistrationHandler implements Initializable{
     	else if(phoneno.getText().length() != 11 )
     	{
     		prompt2.setText("");
+    		prompt22.setText("");
     		prompt21.setText("*Must be 11 digits");
     	}
     	else if(cnic.getText().length() != 13)
     	{
     		prompt21.setText("");
+    		prompt22.setText("");
     		prompt2.setText("*Must be 13 digits");
     	}
     	else
@@ -85,8 +87,7 @@ public class RegistrationHandler implements Initializable{
         	String Password=password.getText();
         	String plan=descBox.getValue();
     		prompt2.setText("");
-    		int x=193;
-    		rc.registration(plan, Name, Age, Cnic, phoneNo, Password);
+    		int x=rc.registration(plan, Name, Age, Cnic, phoneNo, Password);
     		
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(getClass().getResource("SignUpSuccessful.fxml"));

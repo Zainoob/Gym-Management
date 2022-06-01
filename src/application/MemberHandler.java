@@ -185,7 +185,7 @@ public class MemberHandler implements Initializable{
     		else
     		{
     			prompt2.setText("");
-    			prompt2.setText("Mmebership not found");
+    			prompt2.setText("Membership not found");
     		}
     	}
     }
